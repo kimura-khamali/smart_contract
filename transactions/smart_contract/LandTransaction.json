@@ -1,0 +1,17 @@
+[
+    {
+      "inputs": [{"internalType": "address", "name": "oracleAddress", "type": "address"}],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {"indexed": true, "internalType": "uint256", "name": "transactionId", "type": "uint256"},
+        {"indexed": true, "internalType": "uint256", "name": "parcelId", "type": "uint256"},
+        {"indexed": false, "internalType": "uint256", "name": "amount", "type": "uint256"}
+      ],
+      "name": "TransactionAdded",
+      "type": "event"
+    }
+  ]
