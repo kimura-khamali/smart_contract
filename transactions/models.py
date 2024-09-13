@@ -1,6 +1,4 @@
-from django.db import models
-
-# Create your models here.
+# transactions/models.py
 from django.db import models
 
 class Transaction(models.Model):

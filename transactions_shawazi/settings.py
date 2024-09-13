@@ -118,13 +118,24 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = "static/"
+# STATIC_URL = "static/"
+STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+GOOGLE_APPLICATION_CREDENTIALS = '/home/studen/Downloads/landtransaction-5ed998c85123.json'
+
+
+# Blockchain settings
+BLOCKCHAIN_PROVIDER_URL = 'http://localhost:8545'  # Update with your provider URL
+SMART_CONTRACT_ADDRESS = '0xB402A0B53044c145B922cc7960bf2c4010B8CDE5'
+LAND_TRANSACTION_ABI_PATH = os.path.join(BASE_DIR, 'LandTransaction.json')
 
 
 
@@ -133,9 +144,3 @@ LAND_TRANSACTION_ABI_PATH = os.path.join(SMART_CONTRACT_DIR, 'LandTransaction.js
 
 
 
-
-# In settings.py
-
-GOOGLE_APPLICATION_CREDENTIALS = '/path/to/your/google-cloud-credentials.json'
-ETHEREUM_NODE_URL = 'http://localhost:8545'  # Update with your Ethereum node URL
-LAND_TRANSACTION_ABI_PATH = os.path.join(BASE_DIR, 'transactions', 'smart_contracts', 'LandTransaction.json')
